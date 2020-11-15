@@ -5,7 +5,7 @@ var salesChart = new Chart(ctx, {
     data: {
         labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
         datasets: [{
-            label: 'Sales per hour',
+            label: 'Orders per hour',
             data: [3, 0, 5, 15, 43, 50, 53, 41, 60, 80, 82, 112],
             backgroundColor: 'rgba(0, 0, 150, 0.5)',
             borderColor: 'rgba(0, 0, 0, 1)',
