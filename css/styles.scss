@@ -3,9 +3,9 @@
 $tablet: "screen and (min-width: 760px)";
 $desktop: "screen and (min-width: 1200px)";
 
-$border: 1px solid $primary-color;
-
-
+@mixin border{
+  border: 1px solid $primary-color;
+}
 
 * {
   box-sizing: border-box;
@@ -115,16 +115,17 @@ img {
 
 #salesChart{
   position: relative;
-  height:auto !important;
+  height:90% !important;
   width:100% !important;
-  border: $border;
+  @include border;
 }
 
 #newest-orders{
   display: flex;
   table{
     width: 100%;
-    border: $border;
+    height: 90%;
+    @include border;
     margin: 5px 0;
     text-align: left;
   }
@@ -165,11 +166,11 @@ img {
   }
   .dashboardMenu{
     display: flex;
-    width: 20vw;
+    width: 15vw;
   }
   .dashboard-tile{
     margin: 5vh 5vw 5vh 5vw ;
-    width: 30vw;
+    width: 39vw;
   }
 
 }
