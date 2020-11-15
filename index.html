@@ -28,7 +28,7 @@
 <body>
 
     <div class="header">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" onclick="myFunction()"></i>
         <h1>Tryllestøv.dk</h1>
         <div id="datoTid">
             <p>Dato og tid:
@@ -39,7 +39,7 @@
         </div>
         <i class="far fa-bell"></i>
     </div>
-    <div class="dashboardMenu">
+    <div class="dashboardMenu" id="menu">
         <h2>Dashboard</h2>
         <a href="#"><i class="fas fa-th-large">Overview</i></a>
         <a href="#"><i class="fas fa-file">Pages</i></a>
@@ -72,16 +72,40 @@
                     <td>12.14</td>
                 </tr>
                 <tr>
+                    <td>Ninna Hansen</td>
+                    <td>1</td>
+                    <td>399,-</td>
+                    <td>12.12</td>
+                </tr>
+                <tr>
                     <td>Søren Bjerg</td>
                     <td>3</td>
                     <td>2.199,-</td>
                     <td>11.37</td>
                 </tr>
                 <tr>
+                    <td>Jens Mogensen</td>
+                    <td>300</td>
+                    <td>30.000,-</td>
+                    <td>11.03</td>
+                </tr>
+                <tr>
                     <td>Stewert Stardust</td>
                     <td>24</td>
                     <td>69,-</td>
                     <td>9.00</td>
+                </tr>
+                <tr>
+                    <td>Hans-Erik Jensen</td>
+                    <td>2</td>
+                    <td>770,-</td>
+                    <td>8.58</td>
+                </tr>
+                <tr>
+                    <td>Martin Eriksen</td>
+                    <td>6</td>
+                    <td>650,-</td>
+                    <td>8.45</td>
                 </tr>
                 <tr>
                     <td>Jimmy Hendrix</td>
@@ -105,6 +129,15 @@
 
         document.getElementById("dato").innerHTML = dt.toLocaleDateString();
         document.getElementById("tid").innerHTML = dt.toLocaleTimeString();
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menu");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }}
     </script>
     <script src='js/chart.min.js'></script>
 
