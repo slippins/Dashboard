@@ -19,12 +19,12 @@
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5b4743b31a.js" crossorigin="anonymous"></script>
+
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-<script src="https://kit.fontawesome.com/5b4743b31a.js" crossorigin="anonymous"></script>
 <body>
 
     <div class="Header">
@@ -52,8 +52,44 @@
     </div>
     <div class="main">
         <div class="dashboard-tile" id="last-hour">
-            <strong>Activity in the last hour</strong>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <strong>Activity in the last 12 hours</strong>
+            <canvas id="salesChart" style="position: relative; height:15vh; width:40vw"></canvas>
+        </div>
+        <div class="dashboard-tile" id="newest-orders">
+            <strong>Newest orders</strong>
+            <table>
+                <tr>
+                    <th>Customer:</th>
+                    <th>Items:</th>
+                    <th>Price:</th>
+                    <th>Time:</th>
+                </tr>
+                <tr>
+                    <td>Arne Nougatgren</td>
+                    <td>6</td>
+                    <td>1.451,-</td>
+                    <td>12.14</td>
+                </tr>
+                <tr>
+                    <td>Søren Bjerg</td>
+                    <td>3</td>
+                    <td>2.199,-</td>
+                    <td>11.37</td>
+                </tr>
+                <tr>
+                    <td>Stewert Stardust</td>
+                    <td>24</td>
+                    <td>69,-</td>
+                    <td>9.00</td>
+                </tr>
+                <tr>
+                    <td>Jimmy Hendrix</td>
+                    <td>1</td>
+                    <td>12.500</td>
+                    <td>4.20</td>
+                </tr>
+
+            </table>
 
         </div>
     </div>
@@ -62,6 +98,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script>
         var dt = new Date();
 
@@ -69,6 +106,7 @@
         document.getElementById("tid").innerHTML = dt.toLocaleTimeString();
     </script>
     <script src='js/chart.min.js'></script>
+
 
 </body>
 </html>
